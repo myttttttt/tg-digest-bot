@@ -1,0 +1,11 @@
+.env
+*.session
+*.session-journal
+.venv/
+reports/
+logs/
+__pycache__/
+.fly_secrets.tmp
+.session_string.tmp
+*.tmp
+config.py

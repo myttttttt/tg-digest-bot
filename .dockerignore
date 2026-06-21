@@ -1,0 +1,15 @@
+.venv/
+*.session
+*.session-journal
+.env
+.env.example
+logs/
+reports/
+__pycache__/
+.git/
+.gitignore
+*.tmp
+.fly_secrets.tmp
+.session_string.tmp
+README.md
+export_session.py

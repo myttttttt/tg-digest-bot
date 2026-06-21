@@ -1,0 +1,15 @@
+# Fly.io — tg-digest userbot (Telethon)
+# Deploy: fly deploy
+# Logs:   fly logs
+# Worker app:冇 http service,背景常駐 listening TG
+app = "your-app-name"   # 改做你自己嘅 app name,或 deploy 時用 -a 指定
+primary_region = "nrt"   # Tokyo
+
+[build]
+  dockerfile = "Dockerfile"
+
+# 單一 always-on worker machine
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"
