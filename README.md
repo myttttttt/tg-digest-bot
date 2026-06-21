@@ -1,5 +1,7 @@
 # TG Digest Bot
 
+[English](README.md) | [繁體中文](README.zh-TW.md)
+
 A self-hostable Telegram **userbot** that summarizes what specific people said in a group over a time window — powered by Claude.
 
 It reads message history, filters by sender, summarizes (text **and** chart/data images), delivers the result to your Saved Messages, can optionally forward to a forum topic, and can run on a daily schedule — 24/7 on Fly.io or locally.
