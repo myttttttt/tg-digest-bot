@@ -33,8 +33,19 @@ Bot API bots **cannot read group history** or messages from senders before the b
 git clone <your-repo-url> && cd tg-digest-bot
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Then either run the **interactive setup wizard**…
+
+```bash
+python setup.py     # walks you through API keys, writes .env / config.py
+```
+
+…or set it up manually:
+
+```bash
 cp .env.example .env          # fill TG_API_ID / TG_API_HASH / ANTHROPIC_API_KEY
-cp config.example.py config.py   # set scheduled jobs (optional; see comments inside)
+cp config.example.py config.py   # scheduled jobs (optional)
 ```
 
 ### First login (generates your session)
@@ -101,6 +112,10 @@ Edit `app` in `fly.toml` to your app name (or just pass `-a your-app-name` to ev
 flyctl logs -a your-app-name
 flyctl deploy -a your-app-name --ha=false --strategy immediate   # after a code change
 ```
+
+## Claude Code users
+
+Prefer a guided setup? There's a Claude Code skill in [`claude-code-skill/`](claude-code-skill/) — copy it into `~/.claude/skills/` and Claude will walk you through install, config, and deployment step by step. See [claude-code-skill/README.md](claude-code-skill/README.md).
 
 ## License
 

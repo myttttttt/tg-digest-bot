@@ -33,8 +33,19 @@ Bot API bot **讀唔到群組歷史**,亦讀唔到 bot 加入之前嘅發送者�
 git clone <your-repo-url> && cd tg-digest-bot
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+然後可以跑**互動式 setup 精靈**…
+
+```bash
+python setup.py     # 一步步引導你填 API key,自動寫 .env / config.py
+```
+
+…或者手動設定:
+
+```bash
 cp .env.example .env              # 填 TG_API_ID / TG_API_HASH / ANTHROPIC_API_KEY
-cp config.example.py config.py    # 設定排程(可選;格式見檔內註解)
+cp config.example.py config.py    # 排程(可選)
 ```
 
 ### 第一次登入(生成 session)
@@ -101,6 +112,10 @@ flyctl deploy -a your-app-name --ha=false       # 必須單一 instance
 flyctl logs -a your-app-name
 flyctl deploy -a your-app-name --ha=false --strategy immediate   # 改完 code
 ```
+
+## Claude Code 用戶
+
+想要引導式 setup?repo 入面 [`claude-code-skill/`](claude-code-skill/) 有一個 Claude Code skill —— 複製去 `~/.claude/skills/`,Claude 就會一步步帶你完成安裝、設定同部署。詳見 [claude-code-skill/README.md](claude-code-skill/README.md)。
 
 ## 授權
 
